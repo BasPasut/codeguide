@@ -1,5 +1,6 @@
 package codeguide;
 
+//Exercise for SRP principle.
 public class Contract {
 	String name;
 	int phoneNum;
