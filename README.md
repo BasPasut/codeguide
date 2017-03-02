@@ -68,3 +68,31 @@ class Email {
 ```
 
 Reference: http://blog.gauffin.org/2011/07/single-responsibility-prinicple/
+
+##KISS (Keep It Simple, Stupid!)
+KISS, the explanation of this priciple is follow its name. When you write program, you have to think how you can write this program
+in the simplest way because when we write simple code, it'll use less time and it easier to find a mistake than complex code. So,
+you will definitely improve testability and your code would probably be self-documented and much easier to refactor in the future, if required.
+For example : When you want to print number 1-10,
+```
+		int i = 1;
+		System.out.println(i);
+		System.out.println(i+1);
+		System.out.println(i+2);
+		System.out.println(i+3);
+		System.out.println(i+4);
+		System.out.println(i+5);
+		System.out.println(i+6);
+		System.out.println(i+7);
+		System.out.println(i+8);
+		System.out.println(i+9);
+```
+Instead of write very long code above, why don't we just use simpler way.
+
+```
+		for(int i = 1 ; i <= 10 ; i++){
+			System.out.println(i);
+		}
+``` 
+Reference: https://people.apache.org/~fhanik/kiss.html
+	   http://softwareengineering.stackexchange.com/questions/178294/kiss-principle-applied-to-programming-language-design
