@@ -1,21 +1,28 @@
 package codeguide;
 
 public class Contract {
-	public static void main(String[] args) {
-		int a = 1;
-		System.out.println(a);
-		System.out.println(a+1);
-		System.out.println(a+2);
-		System.out.println(a+3);
-		System.out.println(a+4);
-		System.out.println(a+5);
-		System.out.println(a+6);
-		System.out.println(a+7);
-		System.out.println(a+8);
-		System.out.println(a+9);
-		
-		for(int i = 1 ; i <= 10 ; i++){
-			System.out.println(i);
+	String name;
+	int phoneNum;
+	String emergencyCall;
+
+	// TODO create new class that take the responsibility for emergencyCall.
+	public Contract(String name, int phoneNum, String emergencyCall) {
+		this.name = name;
+		this.phoneNum = phoneNum;
+		if (checkEmergencyCall(emergencyCall)) {
+			this.emergencyCall = emergencyCall;
+		} 
+		else {
+			throw new Error("Emergency call number must have * symbol at the first and # at the last. Please try again.");
 		}
+
 	}
+
+	public boolean checkEmergencyCall(String emergencyCall) {
+		if (emergencyCall.substring(0, 1).equals("*") && emergencyCall.endsWith("#") == true) {
+			return true;
+		}
+		return false;
+	}
+
 }
